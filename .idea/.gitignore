@@ -1,0 +1,33 @@
+# Default ignored files
+/shelf/
+/workspace.xml
+# Editor-based HTTP Client requests
+/httpRequests/
+# Datasource local storage ignored files
+/dataSources/
+/dataSources.local.xml
+# Ignore IDE-specific files
+.idea/
+
+# Ignore node_modules (if using npm/yarn)
+node_modules/
+
+# Ignore build directories (if you have any build tools)
+dist/
+build/
+
+# Ignore temporary files
+*.log
+*.swp
+*.swo
+
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db
+
+# Ignore CSS/HTML generated files (if using a preprocessor like SASS/LESS)
+*.css.map
+*.scssc
+
+# Ignore any temporary editor files
+*.tmp

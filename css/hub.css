@@ -1,0 +1,57 @@
+/* Basic styling */
+body {
+  font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.table-wrapper {
+    width: calc(33.333% - 10px);  /* Ensures exactly 3 per row, accounting for margin */
+    float: left;
+    margin: 5px;
+    border: 1px solid #000;
+    box-sizing: border-box; /* Ensures padding/borders don't affect width */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td, th {
+    border: 1px solid black;
+    padding: 5px;
+    text-align: left;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) { /* Maintain 3 columns as long as possible */
+    .table-wrapper {
+        width: calc(33.333% - 10px);
+    }
+}
+
+@media screen and (max-width: 900px) { /* Switch to 2 columns */
+    .table-wrapper {
+        width: calc(50% - 10px);
+    }
+}
+
+@media screen and (max-width: 600px) { /* Collapse to 1 column */
+    .table-wrapper {
+        width: calc(100% - 10px);
+        float: none;
+        margin: 5px auto;
+    }
+}
+
+/* Clearfix to prevent float issues */
+.container::after {
+    content: "";
+    display: table;
+    clear: both;
+}

@@ -1,0 +1,233 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header styling */
+header {
+    background-color: #333;
+    padding: 10px 0;
+    position: sticky; /* Makes the header sticky */
+    top: 0; /* Ensures the header sticks to the top of the page */
+    z-index: 1000; /* Ensures the header stays on top of other content */
+    width: 100%;
+}
+
+header .logo {
+    position: absolute; /* Position the logo absolutely */
+    left: 20px; /* Align the logo to the left */
+    top: 50%; /* Vertically center the logo */
+    transform: translateY(-50%); /* Correct the vertical alignment */
+}
+
+header .logo img {
+    height: 40px; /* Adjust this size as needed */
+    width: auto;
+}
+
+nav {
+    display: flex;
+    justify-content: center; /* Center the navbar items */
+    padding-left: 80px; /* Add space to the left so the nav doesn't overlap with the logo */
+}
+
+nav .navbar {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav .navbar li {
+    margin: 0 20px;
+}
+
+nav .navbar li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 8px 16px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+nav .navbar li a:hover {
+    background-color: #555;
+    border-radius: 4px;
+}
+
+/* Main content container styling */
+.checklist-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Section for each checklist */
+.checklist-section {
+    flex: 1;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for task tables */
+.task-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.task-table th, .task-table td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.task-table th {
+    background-color: #8c8c8c;
+    color: #fff;
+}
+
+details {
+    margin: 10px 0;
+}
+
+/* Style for checkboxes and input fields */
+input[type="checkbox"] {
+    margin-right: 8px;
+}
+
+input[type="text"] {
+    width: 40px;
+    text-align: center;
+    margin-left: 8px;
+}
+
+/* Make the sections stack vertically on smaller screens */
+@media (max-width: 768px) {
+    .checklist-container {
+        flex-direction: column;
+    }
+}
+
+/* Footer Styles */
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #333;
+    padding: 10px 0;
+    text-align: center;
+    z-index: 9999;
+}
+
+/* Ensure the body has space for the footer */
+body {
+    margin-bottom: 80px; /* This will push content above the footer */
+}
+
+/* Footer Buttons Container */
+.footer-buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
+/* Footer Button */
+footer .btn-footer {
+    background-color: #444;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+footer .btn-footer:hover {
+    background-color: #555;
+}
+
+/* Ensure the container covers both the button and menu */
+.footer-btn-container {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 40px; /* Expands hoverable area below the button */
+}
+
+/* Ensure submenus start hidden */
+.menu {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px); /* Start slightly lower */
+    background-color: #555;
+    padding: 20px;
+    width: 300px;
+    border-radius: 5px;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+    z-index: 10000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    pointer-events: none;
+}
+
+/* Increase hover area using ::after */
+.footer-btn-container::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40px; /* Invisible buffer area */
+    background: transparent;
+}
+
+/* Show menu with animation */
+.footer-btn-container:hover .menu {
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(-50%) translateY(0); /* Moves up smoothly */
+    pointer-events: auto;
+}
+
+.menu h3 {
+    color: white;
+    margin-bottom: 10px;
+}
+
+.menu label {
+    display: block;
+    color: white;
+    margin-bottom: 5px;
+}
+
+.menu button {
+    background-color: #444;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+    display: block;
+    width: 100%;
+}
+
+.menu button:hover {
+    background-color: #666;
+}
+
+/* Hover effect to show the menu */
+.footer-btn-container:hover .menu,
+.menu:hover {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+}

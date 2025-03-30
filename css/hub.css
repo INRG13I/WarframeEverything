@@ -1,57 +1,96 @@
-/* Basic styling */
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
 body {
-  font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #000; /* Black background for the body */
+    color: #fff; /* White text color */
 }
 
-.container {
+main {
+    flex: 1;
+    padding: 20px;
+    background-color: #222; /* Dark background for main content */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.checklist-section {
     width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
 }
 
-.table-wrapper {
-    width: calc(33.333% - 10px);  /* Ensures exactly 3 per row, accounting for margin */
-    float: left;
-    margin: 5px;
-    border: 1px solid #000;
-    box-sizing: border-box; /* Ensures padding/borders don't affect width */
-}
-
-table {
+.task-table {
     width: 100%;
     border-collapse: collapse;
+    margin-top: 10px;
 }
 
-td, th {
-    border: 1px solid black;
-    padding: 5px;
+.task-table th, .task-table td {
+    border: 1px solid #fff; /* White borders for contrast */
+    padding: 10px;
     text-align: left;
+    background-color: #333; /* Dark background for table cells */
+    color: #fff; /* White text for table cells */
 }
 
-/* Responsive Design */
-@media screen and (max-width: 1024px) { /* Maintain 3 columns as long as possible */
-    .table-wrapper {
-        width: calc(33.333% - 10px);
+/* Header Styling */
+header {
+    background: linear-gradient(135deg, #283c86, #45a247);
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+header .logo img {
+    width: 60px;
+    transition: transform 0.3s ease;
+}
+
+header .logo:hover img {
+    transform: scale(1.2) rotate(10deg);
+}
+
+.navbar {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.navbar li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+    /* Header Fixes */
+    header {
+        flex-direction: column;
+        text-align: center;
     }
-}
 
-@media screen and (max-width: 900px) { /* Switch to 2 columns */
-    .table-wrapper {
-        width: calc(50% - 10px);
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        margin-top: 10px;
     }
-}
-
-@media screen and (max-width: 600px) { /* Collapse to 1 column */
-    .table-wrapper {
-        width: calc(100% - 10px);
-        float: none;
-        margin: 5px auto;
-    }
-}
-
-/* Clearfix to prevent float issues */
-.container::after {
-    content: "";
-    display: table;
-    clear: both;
 }

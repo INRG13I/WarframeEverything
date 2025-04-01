@@ -144,6 +144,25 @@ footer {
     display: block;
 }
 
+/* Stilizare pentru butoanele "Modify list" și "Add new task" cu gradient */
+.modify-list, .add-new-task {
+    background: linear-gradient(135deg, #00264D, #00498D); /* Gradient similar cu cel din footer/header */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s;
+    width: 100%;
+    text-align: center;
+    margin: 5px 0;
+}
+
+.modify-list:hover, .add-new-task:hover {
+    background: linear-gradient(135deg, #00498D, #007bff); /* Gradient mai deschis la hover */
+}
+
 /* Responsive Design for Mobile (Max-width 768px) */
 @media (max-width: 768px) {
     header {
@@ -211,4 +230,30 @@ input[type="checkbox"]:checked::after {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+/* Stilizare pentru input-urile de tip text și textarea în body */
+body input[type="text"], body textarea {
+    background-color: #222; /* Gri închis, similar cu fundalul paginii */
+    color: white; /* Text alb */
+    border: 2px solid #888; /* Border de culoare gri deschis */
+    border-radius: 5px;
+    padding: 8px 12px; /* Padding mai mic, similar cu dimensiunea textului */
+    font-size: 16px; /* Dimensiune font normală, similară cu textul general */
+    width: 50px; /* Lățime mai mică, potrivită pentru 2 caractere */
+    box-sizing: border-box; /* Include padding-ul și border-ul în dimensiunea totală */
+    margin: 5px 0;
+    transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+/* Adăugăm o limită de 2 caractere pentru input-urile de tip text */
+body input[type="text"] {
+    maxlength: 2; /* Permite doar 2 caractere */
+}
+
+/* Stilizare pentru input-urile și textarea-urile când sunt focusate */
+body input[type="text"]:focus, body textarea:focus {
+    background-color: #333; /* Gri ușor mai deschis când focusat */
+    border-color: #00aaff; /* Border albastru deschis când focusat */
+    outline: none; /* Elimină border-ul default */
 }

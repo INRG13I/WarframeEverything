@@ -6,50 +6,29 @@
     font-family: Arial, sans-serif;
 }
 
+/* Page Background */
 body {
+    background-color: #222;
+    color: white;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background-color: #000; /* Black background for the body */
-    color: #fff; /* White text color */
-}
-
-main {
-    flex: 1;
-    padding: 20px;
-    background-color: #222; /* Dark background for main content */
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-}
-
-.checklist-section {
-    width: 100%;
-}
-
-.task-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 10px;
-}
-
-.task-table th, .task-table td {
-    border: 1px solid #fff; /* White borders for contrast */
-    padding: 10px;
-    text-align: left;
-    background-color: #333; /* Dark background for table cells */
-    color: #fff; /* White text for table cells */
 }
 
 /* Header Styling */
 header {
-    background: linear-gradient(135deg, #283c86, #45a247);
+    background: linear-gradient(135deg, #00264D, #00498D);
     padding: 15px;
     display: flex;
     justify-content: center;
     align-items: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     text-align: center;
+    width: 100%;
+}
+
+header .logo {
+    margin-right: 20px;
 }
 
 header .logo img {
@@ -79,18 +58,125 @@ header .logo:hover img {
     background-color: rgba(255, 255, 255, 0.2);
 }
 
-/* Mobile-specific styles */
+/* Main Content Styling */
+main {
+    flex: 1;
+    padding: 20px;
+    background-color: #222;
+    color: white;
+}
+
+/* Table Container */
+.table-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
+}
+
+.table-wrapper {
+    flex: 1 1 30%;
+    min-width: 300px;
+    background-color: #333;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 12px;
+    text-align: center;
+}
+
+th {
+    background-color: #283c86;
+    color: white;
+    border: 1px solid #333;
+}
+
+td {
+    background-color: #333;
+    color: white;
+    border: 1px solid #333;
+}
+
+tr:nth-child(even) td {
+    background-color: #333;
+}
+
+.cycle-timers {
+    width: 100%;
+    background-color: #333;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.cycle-timers td {
+    background-color: #333;
+    color: white;
+    border: 1px solid #888;
+}
+
+/* Progress Circles Section */
+.construction-wrapper h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.progress-row {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+.progress-circle {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: #444;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.progress-circle .inside-circle {
+    position: absolute;
+    text-align: center;
+    color: white;
+    line-height: 1.4;
+}
+
+.progress-circle.red {
+    background: conic-gradient(red 0% 75%, #444 75% 100%);
+}
+
+.progress-circle.blue {
+    background: conic-gradient(blue 0% 45%, #444 45% 100%);
+}
+
+/* Media Queries */
 @media (max-width: 768px) {
-    /* Header Fixes */
-    header {
-        flex-direction: column;
-        text-align: center;
+    .table-wrapper {
+        flex: 1 1 45%;
+    }
+}
+
+@media (max-width: 480px) {
+    .table-wrapper {
+        flex: 1 1 100%;
     }
 
-    .navbar {
+    .progress-row {
         flex-direction: column;
         align-items: center;
-        gap: 10px;
-        margin-top: 10px;
     }
 }

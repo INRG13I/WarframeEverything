@@ -3,19 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Checklist</title>
+    <title>Hub</title>
     <link rel="icon" href="/images/warframelogo.png" type="image/png">
     <link rel="stylesheet" href="/css/hub.css">
 </head>
 <body>
-
-<!-- Navigation Bar -->
 <header>
     <nav>
         <div class="logo">
             <a><img src="/images/warframelogo.png" alt="Warframe Logo"></a>
         </div>
-
         <ul class="navbar">
             <li><a href="hub.html">Hub</a></li>
             <li><a href="about.html">About</a></li>
@@ -25,6 +22,85 @@
         </ul>
     </nav>
 </header>
+<main>
+    <section class="table-container">
+        <div class="table-wrapper">
+            <center><h2>Cycle Timers</h2></center>
+            <table class="cycle-timers">
+                <tr>
+                    <td align="center">
+                        <img src="/images/sun.png" alt="Sun" width="20" height="20"><br>
+                        <b>Plains of Eidolon(Earth)</b><br> Day<br> <span id="cetusTimer">23s</span>
+                    </td>
+                    <td align="center">
+                        <img src="/images/cold.png" alt="Snow" width="20" height="20"><br>
+                        <b>Orb Vallis(Venus)</b><br> Cold<br> <span id="vallisTimer">13m 11s</span>
+                    </td>
+                    <td align="center">
+                        <img src="/images/fass.png" alt="Fass" width="20" height="20"><br>
+                        <b>Cambion Drift(Deimos)</b><br> Fass<br> <span id="cambionTimer">23s</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center">
+                        <img src="/images/sun.png" alt="Sun" width="20" height="20"><br>
+                        <b>Earth</b><br> Day<br> <span id="earthTimer">23s</span>
+                    </td>
+                    <td align="center">🕒 <b>Daily Reset</b><br> <span id="dailyTimer">9h 19m 24s</span></td>
+                    <td align="center">
+                        <img src="/images/grineer.png" alt="Grineer" width="20" height="20"><br>
+                        <b>Zariman Ten Zero</b><br> Grineer<br> <span id="zarimanTimer">50m 23s</span>
+                    </td>
+                </tr>
+            </table>
+        </div>
 
+        <!-- Replaced middle table with progress circles -->
+        <div class="table-wrapper construction-wrapper">
+            <h2>Construction Progress</h2>
+            <div class="progress-row">
+                <div class="progress-circle red">
+                    <div class="inside-circle">
+                        75%<br><span>Fomoriam</span>
+                    </div>
+                </div>
+                <div class="progress-circle blue">
+                    <div class="inside-circle">
+                        45%<br><span>Razorback</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                <tr>
+                    <th>Header A</th>
+                    <th>Header B</th>
+                    <th>Header C</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Data A</td>
+                    <td>Data B</td>
+                    <td>Data C</td>
+                </tr>
+                <tr>
+                    <td>Data D</td>
+                    <td>Data E</td>
+                    <td>Data F</td>
+                </tr>
+                <tr>
+                    <td>Data G</td>
+                    <td>Data H</td>
+                    <td>Data I</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+</main>
 </body>
 </html>

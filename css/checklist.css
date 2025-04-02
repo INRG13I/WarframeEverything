@@ -257,3 +257,57 @@ body input[type="text"]:focus, body textarea:focus {
     border-color: #00aaff; /* Border albastru deschis când focusat */
     outline: none; /* Elimină border-ul default */
 }
+
+
+/* Stilizare pentru containerul task-urilor din tabel */
+.task-container {
+    position: relative;
+}
+
+/* Stilizare pentru submeniuri (meniuri care se deschid) */
+.task-menu {
+    display: none; /* Ascuns pe default */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #222;
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    z-index: 10;
+    width: 200px; /* Lățime fixă pentru submeniu */
+}
+
+/* Submeniul va fi vizibil la hover sau când checkbox-ul este bifat */
+.task-container:hover .task-menu,
+.task-toggle:checked + label + .task-menu {
+    display: block;
+}
+
+/* Stilizare pentru imaginea din submeniu */
+.task-menu .task-image {
+    width: 100%; /* Face imaginea să ocupe toată lățimea submeniului */
+    max-width: 180px; /* Lățime maximă a imaginii */
+    margin-bottom: 10px;
+    border-radius: 8px; /* Colțuri rotunjite pentru imagine */
+}
+
+/* Stilizare pentru textul din submeniu */
+.task-menu p {
+    font-size: 14px;
+    margin-top: 5px;
+    color: #ccc;
+}
+
+/* Stilizare pentru titlul din submeniu */
+.task-menu h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+/* Ascunderea checkbox-ului (pentru a nu-l afișa pe pagină) */
+.task-toggle {
+    display: none;
+}

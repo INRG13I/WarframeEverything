@@ -1,0 +1,166 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #222;
+    color: white;
+}
+
+/* Updated Header to Match Reference CSS */
+header {
+    background: linear-gradient(135deg, #00264D, #00498D);
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 100%;
+}
+
+header .logo img {
+    width: 60px;
+    transition: transform 0.3s ease;
+}
+
+header .logo:hover img {
+    transform: scale(1.2) rotate(10deg);
+}
+
+.navbar {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.navbar li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Adjust header layout on mobile */
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        margin-top: 10px;
+    }
+}
+
+/* Ensure login boxes stack properly */
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+    gap: 20px;
+}
+
+/* Login Box */
+.login-box {
+    width: 300px;
+    padding: 40px;
+    background-color: #333;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.login-box h2 {
+    text-align: center;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.login-box form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-box label {
+    color: white;
+    margin-bottom: 5px;
+}
+
+.login-box input {
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #888;
+    border-radius: 5px;
+    background-color: #222;
+    color: white;
+    font-size: 16px;
+}
+
+.password-container {
+    position: relative;
+    width: 100%;
+}
+
+#password {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #888;
+    border-radius: 5px;
+    background-color: #222;
+    color: white;
+    font-size: 16px;
+}
+
+.eye-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: white;
+    font-size: 18px;
+}
+
+.show-password {
+    display: none;
+}
+
+.login-btn, .signup-btn {
+    background-color: #00498D;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.signup-btn {
+    background-color: #28a745;
+}
+
+.signup-btn:hover {
+    background-color: #218838;
+}

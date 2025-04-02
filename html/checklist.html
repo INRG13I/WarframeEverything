@@ -17,10 +17,10 @@
         </div>
 
         <ul class="navbar">
-            <li><a href="hub.html">Hub</a></li>
+            <li><a href="https://hub.warframestat.us/">Hub</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="checklist.html">Checklist</a></li>
-            <li><a href="wiki/tempalte_warframe.html">Wiki</a></li>
+            <li><a href="https://wiki.warframe.com/">Wiki</a></li>
             <li><a href="index.html">Log Out</a></li>
         </ul>
     </nav>
@@ -33,16 +33,71 @@
         <table class="task-table">
             <tbody>
             <tr>
-                <td><input type="checkbox" name="login" value="1"> Login</td>
+                <td>
+                    <div class="task-container">
+                        <!-- Checkbox pentru a activa submeniul (fără a fi vizibil pe pagină) -->
+                        <input type="checkbox" id="task-login" class="task-toggle">
+                        <label for="task-login">
+                            <input type="checkbox" name="login" value="1"> Login
+                        </label>
+                        <!-- Submeniul care se deschide la hover sau click -->
+                        <div class="task-menu">
+                            <h3>Login</h3>
+                            <img src="/images/warframelogo.png" alt="Logo" class="task-image">
+                            <p>To complete this task you will nead to open the game, log in and then you will receive the login daily bonus.</p>
+                        </div>
+                    </div>
+                </td>
             </tr>
             <tr>
-                <td><input type="checkbox" name="sortie" value="1"> Sortie</td>
+                <td>
+                    <div class="task-container">
+                        <input type="checkbox" id="task-sortie" class="task-toggle">
+                        <label for="task-sortie">
+                            <input type="checkbox" name="sortie" value="1"> Sortie
+                        </label>
+                        <div class="task-menu">
+                            <h3>Sortie</h3>
+                            <img src="/images/sortielogo.png" alt="Logo" class="task-image">
+                            <p><b>Requrements:</b>MR5 and The War Within</p>
+                            <p><b>Enemy level:</b> 50-60, 65-80, 80-100</p>
+                            <p>To complete you will need to do all 3 missions in order. The missions have various conditions.</p>
+                        </div>
+                    </div>
+                </td>
             </tr>
             <tr>
-                <td><input type="checkbox" name="acrithisTraderDaily" value="1"> Nightwave daily challenges</td>
+                <td>
+                    <div class="task-container">
+                        <input type="checkbox" id="task-dailyNightwave" class="task-toggle">
+                        <label for="task-dailyNightwave">
+                            <input type="checkbox" name="dailyNightwave" value="1"> Daily Nightwave Challenges
+                        </label>
+                        <div class="task-menu">
+                            <h3>Daily Nightwave Challanges</h3>
+                            <p>You can see the menu for the Nightwave in the bottom right of the main manu.</p>
+                            <p>There you can see the daily challenges(the 1000 <img src="/images/standing.png" alt="Standing" width="15" height="15">)</p>
+                            <p>Complete them to increase the tiers</p>
+                        </div>
+                    </div>
+                </td>
             </tr>
             <tr>
-                <td><input type="checkbox" name="primarySyndicates" value="1"> Primary Syndicates</td>
+                <td>
+                    <div class="task-container">
+                        <input type="checkbox" id="task-primarySyndicates" class="task-toggle">
+                        <label for="task-primarySyndicates">
+                            <input type="checkbox" name="primarySyndicates" value="1"> Primary Syndicates Standing
+                        </label>
+                        <div class="task-menu">
+                            <h3>Primary Syndicates Standing</h3>
+                            <img src="/images/primarySyndicates.png" alt="Logo" class="task-image">
+                            <p>You can find the menu for the primary syndicates in the orbiter.</p>
+                            <p>There you can change the pledge. The max standing <img src="/images/standing.png" alt="Standing" width="15" height="15"> is modified by the MR.</p>
+                            <p>To complete play missions and 15% of the total value of affinity acquired will match the gained standing<img src="/images/standing.png" alt="Standing" width="15" height="15">.</p>
+                        </div>
+                    </div>
+                </td>
             </tr>
             <tr>
                 <td>
@@ -51,8 +106,35 @@
                             <td colspan="2">Cetus Standing</td>
                         </tr>
                         <tr>
-                            <td><input type="checkbox" name="cetusStandingOstron" value="1"> Ostron</td>
-                            <td><input type="checkbox" name="cetusStandingQuills" value="1"> Quills</td>
+                            <td>
+                                <div class="task-container">
+                                    <input type="checkbox" id="task-ostronStanding" class="task-toggle">
+                                    <label for="task-ostronStanding">
+                                        <input type="checkbox" name="ostron" value="1"> Ostron
+                                    </label>
+                                    <div class="task-menu">
+                                        <h3>Ostron Standing</h3>
+                                        <img src="/images/cetusStanding.png" alt="Logo" class="task-image">
+                                        <p><b>Requrements:</b>Reach Cetus/Earth</p>
+                                        <p>To gain standing you must do bounties on Plains of Eidolon. You can manage the standing <img src="/images/standing.png" alt="Standing" width="15" height="15"> and get bounties by talking with Konzu(position shown on the photo). </p>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="task-container">
+                                    <input type="checkbox" id="task-quillsStanding" class="task-toggle">
+                                    <label for="task-quillsStanding">
+                                        <input type="checkbox" name="quills" value="1"> Quills
+                                    </label>
+                                    <div class="task-menu">
+                                        <h3>Quills Standing</h3>
+                                        <img src="/images/quillsStanding.png" alt="Logo" class="task-image">
+                                        <p><b>Requrements:</b>Saya's Vigil and The War Within</p>
+                                        <p>To gain standing you must trade in Sentient Cores. You can manage the standing <img src="/images/standing.png" alt="Standing" width="15" height="15"> by talking with Onkko.</p>
+                                        <p>Must be noted that you can enter the quills zone only in operator form.</p>
+                                    </div>
+                                </div>
+                            </td>
                         </tr>
                     </table>
                 </td>
@@ -64,8 +146,35 @@
                             <td colspan="2">Fortuna Standing</td>
                         </tr>
                         <tr>
-                            <td><input type="checkbox" name="fortunaStandingSolarisUnited" value="1"> Solaris United</td>
-                            <td><input type="checkbox" name="fortunaStandingVoxSolaris" value="1"> Vox Solaris</td>
+                            <td>
+                                <div class="task-container">
+                                    <input type="checkbox" id="task-solarisUnitedStanding" class="task-toggle">
+                                    <label for="task-solarisUnitedStanding">
+                                        <input type="checkbox" name="solarisUnited" value="1"> Solaris United
+                                    </label>
+                                    <div class="task-menu">
+                                        <h3>Solaris United Standing</h3>
+                                        <img src="/images/solarisUnitedStanding.png" alt="Logo" class="task-image">
+                                        <p><b>Requrements:</b>Vox Solaris</p>
+                                        <p>To gain standing you must do bounties. You can manage the standing <img src="/images/standing.png" alt="Standing" width="15" height="15"> by talking with Eudico.</p>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="task-container">
+                                    <input type="checkbox" id="task-voxSolarisStanding" class="task-toggle">
+                                    <label for="task-voxSolarisStanding">
+                                        <input type="checkbox" name="voxSolaris" value="1"> Vox Solaris
+                                    </label>
+                                    <div class="task-menu">
+                                        <h3>Vox Solaris Standing</h3>
+                                        <img src="/images/voxSolarisStanding.png" alt="Logo" class="task-image">
+                                        <p><b>Requrements:</b>Vox Solaris, The War Within, acces to The Quills</p>
+                                        <p>To gain standing you must trade toroids. You can manage the standing <img src="/images/standing.png" alt="Standing" width="15" height="15"> by talking with Little Duck.</p>
+                                        <p>Must be noted that you can talk with Little Duck only in operator form.</p>
+                                    </div>
+                                </div>
+                            </td>
                         </tr>
                     </table>
                 </td>
@@ -77,24 +186,132 @@
                             <td>Necralisk Standing</td>
                         </tr>
                         <tr>
-                            <td><input type="checkbox" name="necraliskStandingCavia" value="1"> Cavia</td>
-                            <td><input type="checkbox" name="necraliskStandingEntrati" value="1"> Entrati</td>
-                            <td><input type="checkbox" name="necraliskStandingNecraloid" value="1"> Necraloid</td>
+                            <td>
+                                <div class="task-container">
+                                    <input type="checkbox" id="task-caviaStanding" class="task-toggle">
+                                    <label for="task-caviaStanding">
+                                        <input type="checkbox" name="cavia" value="1"> Cavia
+                                    </label>
+                                    <div class="task-menu">
+                                        <h3>Cavia Standing</h3>
+                                        <img src="/images/caviaStanding.jpeg" alt="Logo" class="task-image">
+                                        <p><b>Requrements:</b>Whispers in the Walls</p>
+                                        <p>To gain standing you must do bounties and trade voca. You can manage the standing <img src="/images/standing.png" alt="Standing" width="15" height="15"> and get bounties by talking with Fibonacci.</p>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="task-container">
+                                    <input type="checkbox" id="task-entratiStanding" class="task-toggle">
+                                    <label for="task-entratiStanding">
+                                        <input type="checkbox" name="entrati" value="1"> Entrati
+                                    </label>
+                                    <div class="task-menu">
+                                        <h3>Entrati Standing</h3>
+                                        <img src="/images/entratiStanding.png" alt="Logo" class="task-image">
+                                        <p><b>Requrements:</b>Heart of Deimos</p>
+                                        <p>To gain standing you must do bounties. You can manage the standing <img src="/images/standing.png" alt="Standing" width="15" height="15"> and get bounties by talking with Mother.</p>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="task-container">
+                                    <input type="checkbox" id="task-necraloidStanding" class="task-toggle">
+                                    <label for="task-necraloidStanding">
+                                        <input type="checkbox" name="necraloid" value="1"> Necraloid
+                                    </label>
+                                    <div class="task-menu">
+                                        <h3>Necraloid Standing</h3>
+                                        <img src="/images/necraloidStanding.jpeg" alt="Logo" class="task-image">
+                                        <p><b>Requrements:</b>Heart of Deimos and The War Within</p>
+                                        <p>To gain standing you must trade orokin Matrices. You can manage the standing <img src="/images/standing.png" alt="Standing" width="15" height="15"> by talking with Loid.</p>
+                                    </div>
+                                </div>
+                            </td>
                         </tr>
                     </table>
                 </td>
             </tr>
             <tr>
-                <td><input type="checkbox" name="focus" value="1"> Focus cap</td>
+                <td>
+                    <div class="task-container">
+                        <input type="checkbox" id="task-theHoldfastStanding" class="task-toggle">
+                        <label for="task-theHoldfastStanding">
+                            <input type="checkbox" name="theHoldfast" value="1"> The Holdfast Standing
+                        </label>
+                        <div class="task-menu">
+                            <h3>The Holdfast Standing</h3>
+                            <img src="/images/theHoldfastStanding.jpeg" alt="Logo" class="task-image">
+                            <p><b>Requrements:</b>Angels of the Zariman</p>
+                            <p>To gain standing you must do bounties and trade Voidplumes. You can manage the standing <img src="/images/standing.png" alt="Standing" width="15" height="15"> and by talking with Quinn.</p>
+                        </div>
+                    </div>
+                </td>
             </tr>
             <tr>
-                <td><input type="checkbox" name="trades" value="1"> Trades</td>
+                <td>
+                    <div class="task-container">
+                        <input type="checkbox" id="task-theHexStanding" class="task-toggle">
+                        <label for="task-theHexStanding">
+                            <input type="checkbox" name="theHex" value="1"> The Hex Standing
+                        </label>
+                        <div class="task-menu">
+                            <h3>The Hex Standing</h3>
+                            <img src="/images/theHexStanding.jpeg" alt="Logo" class="task-image">
+                            <p><b>Requrements:</b>The Hex</p>
+                            <p>To gain standing you must do bounties and trade Hex Treasures. You can manage the standing <img src="/images/standing.png" alt="Standing" width="15" height="15"> by talking with Arthur. You can get bounties by using the bounty board or by using the POM-2 PC in the Garage, Orbiter or Backroom.</p>
+                        </div>
+                    </div>
+                </td>
             </tr>
             <tr>
-                <td><input type="checkbox" name="steelPathIncursions" value="1"> Steel Path Incursions</td>
+                <td>
+                    <div class="task-container">
+                        <input type="checkbox" id="task-focus" class="task-toggle">
+                        <label for="task-focus">
+                            <input type="checkbox" name="focus" value="1"> Focus
+                        </label>
+                        <div class="task-menu">
+                            <h3>Focus</h3>
+                            <img src="/images/focus.jpeg" alt="Logo" class="task-image">
+                            <p><b>Requrements:</b>The War Within</p>
+                            <p>To gain focus you can use focus lens on a weapon/warframe and after reaching max level with that weapon/warframe a portion(depending on the lens) can transform into focus, by finding Convergence Orbs during missions that multily that afinity gained by using equipeent with lens by 10X and giving 5000 focus instantly, by converting eidolon shards or by killing void enemies.</p>
+                            <p>Must be noted that max daily focus increases with MR.</p>
+                        </div>
+                    </div>
+                </td>
             </tr>
             <tr>
-                <td><input type="checkbox" name="forma" value="1"> Forma craft</td>
+                <td>
+                    <div class="task-container">
+                        <input type="checkbox" id="task-trades" class="task-toggle">
+                        <label for="task-trades">
+                            <input type="checkbox" name="trades" value="1"> Trades
+                        </label>
+                        <div class="task-menu">
+                            <h3>Trades</h3>
+                            <p><b>Requrements:</b>MR2 and 2-Factor-Authentification</p>
+                            <p>Number of trades is equal to the MR. You can trade in a dojo or in Maroo's Bazaar.</p>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+            <tr>
+                <td>
+                    <div class="task-container">
+                        <input type="checkbox" id="task-steelPathIncursions" class="task-toggle">
+                        <label for="task-steelPathIncursions">
+                            <input type="checkbox" name="steelPathIncursions" value="1"> Steel Path Incursions
+                        </label>
+                        <div class="task-menu">
+                            <h3>Steel Path Incursions</h3>
+                            <p><b>Requrements:</b>Complete every node on the normal star chart and talk with Teshin</p>
+                            <p>In the Alers tab in the main menu you can find 6 missions that at the end will reward 5 Steel Essence <img src="/images/SteelEssence.png" alt="steelEssence" width="15" height="15"> and extra credits <img src="/images/credits.png" alt="credits" width="15" height="15">.</p>
+                        </div>
+                    </div>
+                </td>
+            </tr>
             </tr>
             </tbody>
         </table>
